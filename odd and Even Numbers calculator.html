@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Odd and Even Numbers Calculator</title>
+    <style>
+        #p
+        {
+            color:red;
+        }
+        button
+        {
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Odd Even Numbers Calculator</h1>
+    <p id="p">Numbers should be separated by space !</p>
+    
+    <label>Type Here :</label>
+    <input type="text" id="input" rows="10" cols="5" required> <br>
+    <button type="submit" onclick="call()">Calculate</button>
+    
+    <p id="output"></p>
+    
+    <script>
+function call()
+{
+ let a  =document.getElementById('input').value
+ let even =0
+ let odd =0
+ let count =a.split(' ')
+ 
+ 
+
+for(let i=0;i< count.length ; i++)
+{
+let num = Number(count[i])
+   
+ if(num%2===0)
+ {
+     even++
+ }
+ else 
+ {
+     odd++
+ }
+
+ }
+document.getElementById('output').innerHTML='Num of odd numbers: '+ odd + '<br>' + " Num of even numbers: "+even
+ 
+}
+    </script>
+    
+</body>
+</html>
+ 
